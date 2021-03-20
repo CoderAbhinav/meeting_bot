@@ -20,5 +20,5 @@ You also required to download the webdriver
 link : https://chromedriver.chromium.org/downloads
 How to install these drivers :
 1) Download the suitable version of chrome driver
-2) Copy the path of the chromedriver and paste it in executable path
+2) Copy the path of the chromedriver and paste it in executable path (at line 33 of program)
 The above procedure is only for Windows
