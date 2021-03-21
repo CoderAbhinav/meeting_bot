@@ -1,6 +1,6 @@
 # meetings_bot
 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 # Project Description
 This program automatically joins you to meetings at scheduled time.
