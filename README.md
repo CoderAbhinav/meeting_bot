@@ -9,10 +9,7 @@ Before using the program please read readme.txt
 
 # To run the program use following command
 
-## for windows
 
-python main.py
-
-## for linux 
+## for linux , windows
 
 python3 main.py
