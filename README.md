@@ -1,4 +1,4 @@
-# meetings_bot
+# meeting_bot
 
 pip3 install -r requirements.txt
 
