@@ -4,12 +4,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-import pandas as pd
-import time 
-import webbrowser
-from datetime import datetime
 import pause
 import pyautogui
+import pandas as pd
+import webbrowser
+
+from datetime import datetime
+import time 
 
 mail_address = ""
 password = ""
@@ -77,46 +78,53 @@ def zoom_by_id(meeting_id, psw):
     time.sleep(5)
     pyautogui.write(psw)
 
-def scheduler(raw_date, raw_time):
-    raw_date = raw_date.split("/")
+def list_of_date_time(raw_date, raw_time):
+    raw_date = raw_date.split("-")
     raw_date = list(map(int, raw_date))
 
     raw_time = raw_time.split(":")
     raw_time = list(map(int ,raw_time))
 
-    target = raw_date + raw_time
-    # print(datetime(*target))
-    pause.until(datetime(*target))
+    final_list = raw_date + raw_time
+    return final_list
 
-# reading data in csv file
-data_frame = pd.read_csv("timings.csv")
+
+df = pd.read_csv("timings.csv")
 i = 0
+while i < df.shape[0]:
+    info = df.iloc[i]
 
-while i<data_frame.shape[0]:
-    # reading the row containing information of meeting
-    info = data_frame.iloc[i]
-    
-    scheduler(str(info[0]), str(info[1]))
+    date_is = str(info[0])
+    time_is = str(info[1])
+    link_is = str(info[2])
+    id_is = str(info[3])
+    psw_is = str(info[4])
 
+    event_schedule = list_of_date_time(date_is, time_is)
+    if datetime(*event_schedule)<datetime.now():
+        i+=1
+        continue
+
+    print("Upcoming Meeting Information : ")
     print(info)
 
-    link_meeting = str(info[2])
-    id_meeting = str(info[3])
-    psw_meeting = str(info[4])
+    pause.until(datetime(*event_schedule))
+    
+    print("Starting the above meeting")
 
-    if 'meet' in link_meeting:
-        google_meet(link_meeting)
+    if 'meet' in link_is:
+        google_meet(link_is)
 
-    elif 'zoom' in link_meeting:
-        zoom(link_meeting)
+    elif 'zoom' in link_is:
+        zoom(link_is)
 
     elif pd.isnull(info[2]):
-        if id_meeting.isdigit():
-            zoom_by_id(id_meeting, psw_meeting)
+        if id_is.isdigit():
+            zoom_by_id(id_is, psw_is)
 
-        elif id_meeting.isalpha():
-            google_meet_by_id(id_meeting)
+        elif id_is.isalpha():
+            google_meet_by_id(id_is)
+
+    df pd.read_csv("timings.csv")
 
     i+=1
-    
-    data_frame = pd.read_csv("timings.csv")
