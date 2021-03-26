@@ -12,16 +12,15 @@ import webbrowser
 from datetime import datetime
 import time 
 
-mail_address = ""
-password = ""
+my_mail_id = 'an470870@gmail.com'
+my_password = 'abhinav107'
 
-
-def google_meet(meet_url):
-    global mail_address
-    global password
-
-    # setting default options in chrome
-    opt = Options() 
+def google_meet_with_gmail_login(meet_url):
+    global my_mail_id
+    global my_password
+    mail_address = my_mail_id
+    password = my_password
+    opt = webdriver.ChromeOptions() 
     opt.add_argument('--disable-blink-features=AutomationControlled') 
     opt.add_argument('--start-maximized') 
     opt.add_experimental_option("prefs", { 
@@ -30,9 +29,10 @@ def google_meet(meet_url):
 	"profile.default_content_setting_values.geolocation": 0, 
 	"profile.default_content_setting_values.notifications": 1
     })
-    
-    driver = webdriver.Chrome(options=opt)
 
+    driver = webdriver.Chrome(executable_path="chromedriver.exe", options=opt)
+    driver.get("https://google.com") 
+    driver.maximize_window()
     # going to Gmail Login Page
     driver.get('https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAAQ')
 
@@ -64,23 +64,61 @@ def google_meet(meet_url):
 
     #click on join button
     driver.find_element_by_css_selector('div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt').click()
+    input("press any key to stop program")
+    
+
+
+def google_meet_with_profile(meet_url):
+    
+    options = webdriver.ChromeOptions() 
+    options.add_argument("--user-data-dir=C:\\Users\\keyur\\AppData\\Local\\Google\\Chrome\\User Data") #Path to your chrome profile
+    options.add_argument('--profile-directory=Default') #give your profile
+    driver = webdriver.Chrome(executable_path="chromedriver.exe", options=options)
+    driver.get("https://google.com") 
+    driver.maximize_window()
+    
+
+    # going to google meet link
+    driver.get(meet_url) 
+    wait = WebDriverWait(driver, 10)    
+    
+    # turn off mic
+    wait.until(EC.visibility_of_element_located((By.CLASS_NAME ,'sUZ4id' ))).click()
+    driver.implicitly_wait(3)
+    
+    # turn off camera 
+    driver.find_elements_by_class_name('sUZ4id')[1].click()
+    driver.implicitly_wait(3) 
+    time.sleep(2)
+
+    #click on join button
+    emailid = driver.find_element_by_css_selector('div.ASy21.Duq0Bf')
+    print(emailid.text)
+    if not (emailid.text.endswith("@viit.ac.in")):
+        driver.quit()
+        raise Exception("Wrong Email Exception")
+
+    
+def google_meet(meeting_url):
+    try:
+        google_meet_with_profile(meeting_url)
+    except Exception as e:
+        print(e)
+        google_meet_with_gmail_login(meeting_url)
+
 
 def google_meet_by_id(meeting_id):
     url = f"http://meet.google.com/{meeting_id}"
     google_meet(url)
 
 def zoom(zoom_url):
-   webbrowser.open(meeting_url)
+   webbrowser.open(zoom_url)
 
-def zoom_by_id(meeting_id, psw):
-    url = f"http://zoom.us/j/{meeting_id}"
-    zoom(url)
-    time.sleep(5)
-    pyautogui.write(psw)
 
 def list_of_date_time(raw_date, raw_time):
     raw_date = raw_date.split("-")
     raw_date = list(map(int, raw_date))
+    raw_date.reverse()
 
     raw_time = raw_time.split(":")
     raw_time = list(map(int ,raw_time))
@@ -101,6 +139,7 @@ while i < df.shape[0]:
     psw_is = str(info[4])
 
     event_schedule = list_of_date_time(date_is, time_is)
+    print(*event_schedule)
     if datetime(*event_schedule)<datetime.now():
         i+=1
         continue
@@ -125,6 +164,6 @@ while i < df.shape[0]:
         elif id_is.isalpha():
             google_meet_by_id(id_is)
 
-    df pd.read_csv("timings.csv")
+    df = pd.read_csv("timings.csv")
 
     i+=1
