@@ -12,8 +12,8 @@ import webbrowser
 from datetime import datetime
 import time 
 
-my_mail_id = 'an470870@gmail.com'
-my_password = 'abhinav107'
+my_mail_id = ''
+my_password = ''
 
 def google_meet_with_gmail_login(meet_url):
     global my_mail_id
