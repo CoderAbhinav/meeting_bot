@@ -1,23 +1,11 @@
-Automation Bot
+## In order to use this bot
+1) First open the timings.csv file
+2) Write date in the form DD-MM-YYYY and the time should be in 24 hrs format HH:MM:SS
+3) You can add details to this CSV file at any point of time during execution
+The program automatically updates the schedule
 
-The following program is developed by students of 
-Vishwakarma Institute of Information Technology, Pune
-for Project Based Learning
-
-Participants in the project are:
-1) Keyur Gandhi
-2) Abhinav Belhekar
-3) Shardul Joshi
-4) Atharva Chavan
-
-
-prequisites : 
-Windows : pip install -r requirements.txt
-Linux : pip3 install -r requirements.txt
-
-
-
-
-How to use:
-Just paste the details like, date, time, meeting link in timings.csv
-and run the program 
+## Changes you should make in main.py
+1) add your email to mp.take_credentials('emai id','password') (at line 11 )
+2) add profile path to mp.change_profile_path("path") (at line 17)
+3) to get your profile path open chrome and type chrome://versions
+  on that page you will find Profile Path , copy it and paste it to the function
