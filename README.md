@@ -1,4 +1,4 @@
-![Meeting_Bot](Meeting.png)
+![Meeting_Bot
 
 
           /\    /\    ___  ___ ____ ____          ____
@@ -7,7 +7,7 @@
         _______   _   _  ___  _________________________
        |       | |_) | |  |  |             version 1.0 |
        |_______| |_) |_|  |  |_________________________|
-
+](Meeting.png)
 # To run the program 
 ## step 1
 Go throght readme.txt
