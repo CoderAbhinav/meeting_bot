@@ -22,6 +22,9 @@ Vishwakarma Institute Of Information Technology, Pune
 
 # Participants
 Abhinav Belhekar (https://github.com/CoderAbhinav)
+
 Keyur Gandhi     (https://github.com/keyurgit45  )
+
 Shardul Joshi    (https://github.com/shardul2002)
+
 Atharva Chavan   (https://github.com/programmerAtharva)
