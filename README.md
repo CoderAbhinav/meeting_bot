@@ -1,4 +1,4 @@
-![Meeting Bot](https://www.canva.com/design/DAEaEZOKrnk/e8JJgXHkbqCPdB5l9SCcmw/view?utm_content=DAEaEZOKrnk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+![Meeting_Bot](Meeting.png)
           /\    /\    ___  ___ ____ ____          ____
          // \  // \  ||__ ||__  ||   ||  ||\\ || ||  __
         //   \//   \ ||__ ||__  ||  _||_ || \\|| ||__||
