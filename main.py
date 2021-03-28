@@ -8,13 +8,12 @@ import project_intro
 project_intro.give_intro()
 
 # add email & password
-mp.take_credentials('Your Email ID','Your Password')
+mp.take_credentials('emai id','password')
 
 # the following chromedriver is for widows 10 64 bit (chrome version 89)
-mp.change_driver_path('chromedriver')
+mp.change_driver_path('files/chromedriver.exe')
 
 # to get user profile path go to chrome://version
-# path will look like C:/Users/<user name>/AppData/Local/Google/Chrome/User Data/Profile 1
 mp.change_profile_path("path")
 
 def list_of_date_time(raw_date, raw_time):
@@ -28,7 +27,7 @@ def list_of_date_time(raw_date, raw_time):
     final_list = raw_date + raw_time
     return final_list
 
-print("Getting your Schedule ")
+print("         Getting your Schedule.....")
 df = pd.read_csv("timings.csv")
 i = 0
 while i < df.shape[0]:
@@ -50,7 +49,7 @@ while i < df.shape[0]:
     print(info)
 
     pause.until(datetime(*event_schedule))
-    playsound('audio/notification.mp3')
+    playsound('files/audio/notification.mp3')
     print("Starting the above meeting")
 
     if 'meet' in link_is:
@@ -71,4 +70,4 @@ while i < df.shape[0]:
     i+=1
 print("         All the meetings are Over Enjoy Your Day !")
 input("         Press Enter to exit :")
-playsound('audio/shutdown_1.mp3')
+playsound('files/audio/shutdown_1.mp3')

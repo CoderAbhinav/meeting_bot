@@ -1,11 +1,4 @@
-         
-          /\    /\    ___  ___ ____ ____          ____
-         // \  // \  ||__ ||__  ||   ||  ||\\ || ||  __
-        //   \//   \ ||__ ||__  ||  _||_ || \\|| ||__||
-        _______   _   _  ___  _________________________
-       |       | |_) | |  |  |      version 1.0-stable |
-       |_______| |_) |_|  |  |_________________________|
-
+# meeting_bot
 
 pip3 install -r requirements.txt
 
@@ -20,10 +13,3 @@ Before using the program please read readme.txt
 ## for linux , windows
 
 python3 main.py
-
-## Project By:
-        Abhinav Belhekar (https://github.com/CoderAbhinav)
-        Keyur Gandhi     (https://github.com/keyurgit45  )
-        Shardul Joshi    (https://github.com/shardul2002)
-        Atharva Chavan   (https://github.com/programmerAtharva)
-

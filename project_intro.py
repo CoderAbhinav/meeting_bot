@@ -35,7 +35,7 @@ def print_starting():
         '''
     print(str1)
 def auout(): 
-    playsound('audio/startup_1.mp3')
+    playsound('files/audio/startup_1.mp3')
 
 def give_intro():
     print_starting()
