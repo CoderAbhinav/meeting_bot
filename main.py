@@ -8,13 +8,14 @@ import project_intro
 project_intro.give_intro()
 
 # add email & password
-mp.take_credentials('abhinav.22010389@viit.ac.in','Nope')
+mp.take_credentials('Your Email ID','Your Password')
 
 # the following chromedriver is for widows 10 64 bit (chrome version 89)
 mp.change_driver_path('chromedriver')
 
 # to get user profile path go to chrome://version
-mp.change_profile_path("C:/Users/HP/AppData/Local/Google/Chrome/User Data/Profile 1")
+# path will look like C:/Users/<user name>/AppData/Local/Google/Chrome/User Data/Profile 1
+mp.change_profile_path("path")
 
 def list_of_date_time(raw_date, raw_time):
     raw_date = raw_date.split("-")
