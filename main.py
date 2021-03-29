@@ -38,6 +38,10 @@ while i < df.shape[0]:
     link_is = str(info[2])
     id_is = str(info[3])
     psw_is = str(info[4])
+    
+    if pd.isnull(info[0]):
+        i+=1
+        continue
 
     event_schedule = list_of_date_time(date_is, time_is)
     # print(*event_schedule)
