@@ -15,7 +15,7 @@ This Project is made by students of First Year Computer Engineering at
 Vishwakarma Institute Of Information Technology, Pune
 (http://www.viit.ac.in)
 
-# Participants
+# Developed By : 
 Abhinav Belhekar (https://github.com/CoderAbhinav)
 
 Keyur Gandhi     (https://github.com/keyurgit45  )
