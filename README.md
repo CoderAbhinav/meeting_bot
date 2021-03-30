@@ -1,14 +1,19 @@
 ![meeting bot](files/Meeting.png)
+
+## [About](#about-the-project)
+
+## [Developers](#developed-by)
+
 ## [How to use](#to-run-the-program)
 
-# About The Project :
+# About The Project
 This is a simple bot which automatically log you in to your scheduled 
 meeting. So there will be no more hassle for you to join any meeting
 This Project is made by students of First Year Computer Engineering at
 Vishwakarma Institute Of Information Technology, Pune
 (http://www.viit.ac.in)
 
-# Developed By : 
+# Developed By 
 Abhinav Belhekar (https://github.com/CoderAbhinav)
 
 Keyur Gandhi     (https://github.com/keyurgit45  )
