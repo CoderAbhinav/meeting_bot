@@ -1,4 +1,4 @@
-![](Meeting.png)
+![](files/Meeting.png)
 
 # To run the program 
 ## step 1
