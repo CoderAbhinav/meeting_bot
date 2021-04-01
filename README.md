@@ -1,10 +1,12 @@
-![meeting bot](files/Meeting.png)
+
 
 ## [About](#about-the-project)
 
 ## [Developers](#developed-by)
 
 ## [How to use](#to-run-the-program)
+
+![meeting bot](files/Meeting.png)
 
 # About The Project
 This is a simple bot which automatically log you in to your scheduled 
