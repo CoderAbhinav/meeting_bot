@@ -14,13 +14,13 @@ Vishwakarma Institute Of Information Technology, Pune
 (http://www.viit.ac.in)
 
 # Developed By 
-Abhinav Belhekar (https://github.com/CoderAbhinav)
+Abhinav Belhekar  ![Github](files/GitHub-Mark-32px.png)[CoderAbhinav](https://github.com/CoderAbhinav)
 
-Keyur Gandhi     (https://github.com/keyurgit45  )
+Keyur Gandhi     ![Github](files/GitHub-Mark-32px.png)(https://github.com/keyurgit45  )
 
-Shardul Joshi    (https://github.com/shardul2002)
+Shardul Joshi    ![Github](files/GitHub-Mark-32px.png)(https://github.com/shardul2002)
 
-Atharva Chavan   (https://github.com/programmerAtharva)
+Atharva Chavan   ![Github](files/GitHub-Mark-32px.png)(https://github.com/programmerAtharva)
 
 
 # To run the program 
