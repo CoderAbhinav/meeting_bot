@@ -114,7 +114,7 @@ def google_meet_with_profile(meet_url):
     if not (emailid.text.endswith(email_end_with)):
         driver.quit()
         raise Exception("Wrong Email Exception")
-    # input("Press Enter to Exit : ")
+    input("Press Enter to Exit : ")
 
    
 def google_meet(meeting_url):
