@@ -26,7 +26,8 @@ def change_driver_path(path):
 
 def change_profile_path(path):
     global path_to_chrome_profile, profile
-    path_to_chrome_profile = path
+    data = path.split('/')
+    path_to_chrome_profile = '/'.join(data[:-1])
     profile = path.split('/')[-1]
 
 
