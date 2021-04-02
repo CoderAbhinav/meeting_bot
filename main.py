@@ -8,13 +8,13 @@ import project_intro
 project_intro.give_intro()
 
 # add email & password
-mp.take_credentials('emai id','password')
+mp.take_credentials('email@gmail.com','password')
 
 # the following chromedriver is for widows 10 64 bit (chrome version 89)
 mp.change_driver_path('files/chromedriver.exe')
 
 # to get user profile path go to chrome://version
-mp.change_profile_path("path")
+mp.change_profile_path("please change this path")
 
 def list_of_date_time(raw_date, raw_time):
     raw_date = raw_date.split("-")
@@ -33,15 +33,15 @@ i = 0
 while i < df.shape[0]:
     info = df.iloc[i]
 
+    if pd.isnull(info[0]):
+        i+=1
+        continue
+
     date_is = str(info[0])
     time_is = str(info[1])
     link_is = str(info[2])
     id_is = str(info[3])
     psw_is = str(info[4])
-    
-    if pd.isnull(info[0]):
-        i+=1
-        continue
 
     event_schedule = list_of_date_time(date_is, time_is)
     # print(*event_schedule)
@@ -49,7 +49,7 @@ while i < df.shape[0]:
         i+=1
         continue
 
-    print("Upcoming Meeting Information : ")
+    print("\nUpcoming Meeting Information : ")
     print(info)
 
     pause.until(datetime(*event_schedule))

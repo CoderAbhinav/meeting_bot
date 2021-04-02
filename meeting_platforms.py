@@ -26,7 +26,8 @@ def change_driver_path(path):
 
 def change_profile_path(path):
     global path_to_chrome_profile, profile
-    path_to_chrome_profile = path
+    data = path.split('/')
+    path_to_chrome_profile = '/'.join(data[:-1])
     profile = path.split('/')[-1]
 
 
@@ -90,7 +91,7 @@ def google_meet_with_profile(meet_url):
     options = webdriver.ChromeOptions() 
     options.add_argument(f"--user-data-dir={path_to_chrome_profile}") #Path to your chrome profile
     options.add_argument(f'--profile-directory={profile}') #give your profile
-    # options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(executable_path=f"{chrome_driver_path}", options=options)
     time.sleep(5)
     driver.get("https://google.com") 
@@ -101,21 +102,19 @@ def google_meet_with_profile(meet_url):
     driver.get(meet_url) 
     wait = WebDriverWait(driver, 10)    
     
-    # turn off mic
+    # turn off mic and camera
     wait.until(EC.visibility_of_element_located((By.CLASS_NAME ,'sUZ4id' ))).click()
     driver.implicitly_wait(3)
-    
-    # turn off camera 
-    driver.find_elements_by_class_name('sUZ4id')[1].click()
-    driver.implicitly_wait(3) 
+     
     time.sleep(2)
 
     #click on join button
-    emailid = driver.find_element_by_css_selector('div.ASy21.Duq0Bf')
+    emailid = driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[1]/div[3]/div/div/div')
     print(emailid.text)
     if not (emailid.text.endswith(email_end_with)):
         driver.quit()
         raise Exception("Wrong Email Exception")
+    # input("Press Enter to Exit : ")
 
    
 def google_meet(meeting_url):
