@@ -5,20 +5,20 @@
 
 ## [Developers](#developed-by)
 
-## [How to use](#to-run-the-program)
+## [Getting Started](#getting-started:)
 
 ![meeting bot](files/Meeting_logo.png)
 
 
 
-
+-----------------------------------------------
 # About The Project
 This is a simple bot which automatically log you in to your scheduled 
 meeting. So there will be no more hassle for you to join any meeting
 This Project is made by students of First Year Computer Engineering at
 Vishwakarma Institute Of Information Technology, Pune
 (http://www.viit.ac.in)
-
+----------------------------------------------------
 # Developed By 
 ![Github/](files/GitHub-Mark-32px.png)[ /CoderAbhinav](https://github.com/CoderAbhinav) - Abhinav Belhekar
 
@@ -28,13 +28,41 @@ Vishwakarma Institute Of Information Technology, Pune
 
 ![Github](files/GitHub-Mark-32px.png)[ /programmerAtharva](https://github.com/programmerAtharva) - Atharva Chavan
 
+--------------------------------------------------------
 
-# To run the program 
-## step 1
-Go throght readme.txt
-## step 2
-pip3 install -r requirements.txt
-## step 3
-python3 main.py
+# Getting Started:
+* ## Setting Your Environment 
+    - Open the folder containgin the program.
+    - Open terminal in the folder.
+        - In Windows by typing 'cmd' in the file explorer
+    - Then type the following command
+        - > ### pip3 install -r requirements.txt
+    - As the Environment is ready go to the next part of the process
+
+* ## Writing your schedule 
+    - To write the schedule just open the 'timings.csv' file in Excel.
+    - Then write the appropriate data in column.
+    - How to Enter the details ?
+        - Date Column : Format (DD/MM/YYYY)
+        - Time column : Format (HH:MM:SS) 24 hours format 
+    - The program is designed in such a way that it would automaticaly check if link is available or not, if it is unavilable then the program uses ID & Password
+    - You can write one of the Link or ID and Password.
+
+* ## Changes required in program:
+    - Open main.py file in any text editor
+    - Add your email id and password at line 11 of program.
+    - Add chrome profile path at line 17 of program.
+        - You can get user path by typing 
+        > chrome://version 
+
+        in google chrome. (look for profile path : )
+    -Your Program is now ready to use.
+
+* ## How to use the program ?
+    - Open terminal in the folder containing the program.
+    - type the following command
+        - > python3.8 main.py
+    
+
 
 
