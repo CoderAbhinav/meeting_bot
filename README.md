@@ -5,7 +5,7 @@
 
 ## [Developers](#developed-by)
 
-## [Getting Started](#getting-started:)
+## [Getting Started](#getting-started)
 
 ![meeting bot](files/Meeting_logo.png)
 
@@ -30,7 +30,7 @@ Vishwakarma Institute Of Information Technology, Pune
 
 --------------------------------------------------------
 
-# Getting Started:
+# Getting Started
 * ## Setting Your Environment 
     - Open the folder containgin the program.
     - Open terminal in the folder.
