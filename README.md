@@ -6,7 +6,7 @@
 
 ## [How to use](#to-run-the-program)
 
-![meeting bot](files/Meeting.png)
+![meeting bot](files/Meeting_logo.png)
 
 # About The Project
 This is a simple bot which automatically log you in to your scheduled 
