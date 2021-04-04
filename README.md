@@ -54,10 +54,9 @@ Vishwakarma Institute Of Information Technology, Pune
     - Add your email id and password at line 11 of program.
     - Add chrome profile path at line 17 of program.
         - You can get user path by typing 
-        > #### chrome://version 
-
+        > #### chrome://version    
         in google chrome. (look for profile path : )
-    -Your Program is now ready to use.
+    - Your Program is now ready to use.
 
 * ## How to use the program ?
     - Open terminal in the folder containing the program.
