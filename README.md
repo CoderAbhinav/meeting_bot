@@ -1,5 +1,5 @@
 ![](https://img.shields.io/github/repo-size/CoderAbhinav/meeting_bot) ![](https://img.shields.io/hackage-deps/v/selenium) ![](https://img.shields.io/github/contributors/CoderAbhinav/meeting_bot) ![](https://img.shields.io/github/last-commit/CoderAbhinav/meeting_bot) ![](https://img.shields.io/github/downloads/CoderAbhinav/meeting_bot/total) ![](https://img.shields.io/github/forks/CoderAbhinav/meeting_bot?style=social)
-
+![](https://img.shields.io/pypi/pyversions/pandas)
 
 ## [About](#about-the-project)
 
@@ -54,8 +54,8 @@ Vishwakarma Institute Of Information Technology, Pune
     - Add your email id and password at line 11 of program.
     - Add chrome profile path at line 17 of program.
         - You can get user path by typing 
-        > #### chrome://version    
-        in google chrome. (look for profile path : )
+            > ### chrome://version    
+            in google chrome. (look for profile path : )
     - Your Program is now ready to use.
 
 * ## How to use the program ?
