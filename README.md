@@ -61,7 +61,7 @@ Vishwakarma Institute Of Information Technology, Pune
 * ## How to use the program ?
     - Open terminal in the folder containing the program.
     - type the following command
-        - > ### python3.8 main.py
+        - > ### python main.py
     
 
 
