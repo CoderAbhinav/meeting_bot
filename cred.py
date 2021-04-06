@@ -1,20 +1,39 @@
 from cryptography.fernet import Fernet
 from datetime import datetime
-import os
 
-key= Fernet.generate_key()
 
-with open('mykey.key','wb') as mykey:
-    mykey.write(key)
-with open('mykey.key','rb') as mykey:
-    key= mykey.read()
-print(key)
+key = b'soYkJaGosGZ_JCHkP8A7By6AbGkSf_mWUL-wP3zUkS8='
 
-f=Fernet(key)
-with open('email and password.csv','rb') as orignal_file:
-    original=orignal_file.read()
+f = Fernet(key)
 
-encrypted = f.encrypt(original)
 
-with open ('enc_email and password.csv','wb') as encrypted_file:
-    encrypted_file.write(encrypted)
+
+
+def encrypt_data(data1,data2):
+
+
+
+
+
+    email= f.encrypt(bytes(data1, 'utf-8'))
+    password=f.encrypt(bytes(data2,'utf-8'))
+    with open("data.txt","wb") as file:
+
+        file.write(email)
+        file.write(b'\n')
+        file.write(password)
+
+def decrypt_data():
+
+    with open("data.txt","rb") as file:
+
+        email=file.readlines(1)
+        password=file.readlines(2)
+    x=f.decrypt(email[0])
+    y=f.decrypt(password[0])
+    print(x)
+    print(y)
+
+encrypt_data()
+decrypt_data()
+
