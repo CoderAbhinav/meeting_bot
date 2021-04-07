@@ -1,6 +1,6 @@
 from cryptography.fernet import Fernet
 from datetime import datetime
-
+import os
 
 key = b'soYkJaGosGZ_JCHkP8A7By6AbGkSf_mWUL-wP3zUkS8='
 
@@ -34,6 +34,13 @@ def decrypt_data():
     print(x)
     print(y)
 
-encrypt_data()
-decrypt_data()
+""" encrypt_data()
+decrypt_data() """
+if not (os.path.isfile("data.txt")):
+    x = str(input("Please enter email : "))
+    y = str(input("Please enter password : "))
+    encrypt_data(x,y)
+else:
+    decrypt_data()
 
+   
