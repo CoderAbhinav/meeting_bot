@@ -3,3 +3,4 @@ pandas==1.2.2
 PyAutoGUI==0.9.52
 pause==0.3
 playsound==1.2.2
+cryptography==2.8 
