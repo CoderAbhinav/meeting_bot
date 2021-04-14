@@ -4,11 +4,13 @@ import pandas as pd
 from datetime import datetime
 from playsound import playsound
 import project_intro
+import cred
 
 project_intro.give_intro()
 
+email, password = cred.re_cred()
 # add email & password
-mp.take_credentials('emai id','password')
+mp.take_credentials(email, password)
 
 # the following chromedriver is for widows 10 64 bit (chrome version 89)
 mp.change_driver_path('files/chromedriver.exe')
