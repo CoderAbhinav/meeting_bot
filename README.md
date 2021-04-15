@@ -37,7 +37,7 @@ Vishwakarma Institute Of Information Technology, Pune
     - Open terminal in the folder.
         - In Windows by typing 'cmd' in the file explorer
     - Then type the following command
-        - > ### pip3 install -r requirements.txt
+        - > ### pip install -r requirements.txt
     - As the Environment is ready go to the next part of the process
 
 * ## Writing your schedule 
