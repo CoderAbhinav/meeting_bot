@@ -1,7 +1,7 @@
 ![](https://img.shields.io/github/repo-size/CoderAbhinav/meeting_bot) ![](https://img.shields.io/hackage-deps/v/selenium) ![](https://img.shields.io/github/contributors/CoderAbhinav/meeting_bot) ![](https://img.shields.io/github/last-commit/CoderAbhinav/meeting_bot) ![](https://img.shields.io/github/downloads/CoderAbhinav/meeting_bot/total) ![](https://img.shields.io/github/forks/CoderAbhinav/meeting_bot?style=social)
 ![](https://img.shields.io/pypi/pyversions/pandas)
 
-[To know more about the flow of program click here](https://www.canva.com/design/DAEb2Knygxw/view)
+
 
 ## [About](#about-the-project)
 
